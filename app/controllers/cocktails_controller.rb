@@ -12,7 +12,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new
   end
   def create
-    @cocktail = Cocktail.new(cocktails_params)
+    @cocktail = Cocktail.new(cocktail_params)
     @cocktail.save
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
@@ -21,7 +21,7 @@ class CocktailsController < ApplicationController
     end
   end
 
-  def cocktails_params
-    params.require(:cocktails).permit(:name, :doses)
+  def cocktail_params
+    params.require(:cocktail).permit(:name)
   end
 end
