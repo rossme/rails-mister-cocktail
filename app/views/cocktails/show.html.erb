@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <a class="navbar-brand" href="#">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+    <img src="https://res.cloudinary.com/djnfnwxgu/image/upload/c_scale,q_auto:best,r_0,w_200/a_30/v1598000400/neon_ssh5kd.gif" />
 </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,6 +26,10 @@
   </div>
 </div>
 <div class="container">
-<p>You've just added a <strong><%= @cocktail.name %></strong></p>
-  <%= link_to "Add another cocktail", new_cocktail_path %>
+  <p>You've just added a <strong><%= @cocktail.name %></strong></p>
+   <%= link_to "Add another cocktail", new_cocktail_path %>
+   <div class="container">
+    <%= link_to "Back home", cocktails_path %>
+  </div>
 </div>
+
