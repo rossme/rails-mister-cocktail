@@ -1,23 +1,26 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+  </a>
+</div>
 
-<div class="banner" style="background-color: black;">
-  <div class="container" style="display: flex; justify-content: center;">
-    <%= cl_image_tag("neon_ssh5kd.gif", :transformation=>[
-      {:quality=>100, :height=>200, :crop=>"scale"},
-      {:angle=>18}
-    ]) %>
+<div class="container">
+  <div class="banner" style="margin-top: 0px; box-shadow: 0 0 15px rgba(0,0,0,0.2); background-image: url(https://res.cloudinary.com/djnfnwxgu/image/upload/v1598134780/le_cock_neon_tzaj3k.gif);">
+</div>
+
+<div class="container" style="margin-top: 60px;">
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+      <%= link_to cocktail.name, cocktail_path(cocktail)%>
+    </div>
+    <% end %>
   </div>
 </div>
 
-<div class="container" style="padding-top: 20px;">
-  <p>Here are your saved cocktails:</p>
-  <div class="flex-item">
-    <ul>
-      <% @cocktails.each do |cocktail| %>
-      <li><%= link_to cocktail.name, cocktail_path(cocktail)%></li>
-        <% end %>
-    </ul>
-  </div>
-  <div class="flex-item">
-    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-secondary btn-sm" %>
+<div class="footer" style="margin-top: 60px;">
+  <div class="footer-copyright">
+    <a href="https://github.com/rossme" target="_blank">Find me <i class="fab fa-github"></i> at Github</a>
   </div>
 </div>
+
